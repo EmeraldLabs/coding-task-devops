@@ -20,8 +20,11 @@ Instructions
  - Write terraform modules/code to build the AWS infrastructure "VPC / Subnet / etc..." 
  - Write scripts and yaml files, in order to run this application on a Kubernetes cluster, i.e. Helm charts or Kubernetes manifests.
  - Write scripts and yaml files, in order to setup Mongodb inside a Kubernetes cluster, optionally in High Availability mode, i.e. replica set - master/slave.
+ - Write scripts to deploy Load Balancer and configure the ingress route on Kubernetes using NGINX / Traefik.
  - You may need to modify the application source code or configuration in order to make the application running on Kubernetes cluster, e.g. make use ENV variables in 12Factor style, create Dockerfile.
- - Automate building process into the application with travis / github action or any CI/CD of your choice. 
+ - Automate building process into the application with travis / github action.
+ - Automate the deployment process using any CI/CD like Jenkins.
+ - Build and Deploy CI/CD tool on AWS using Configuration Management like Ansible / Chef / Saltstack etc.
  - Review your solution and ensure it follows best practices of building and deploying microservices.
  - You have to write documentation and/or instructions about what you have done. This documents must detail steps for other DevOps to understand how to deploy this application and maintain it.
 
@@ -29,12 +32,12 @@ Suggested tools
 =======
 You can use - not limited to - this tools in your solution:
 - Terraform
-- Ansible
+- Ansible / Chef / Saltstack
 - Docker
 - Kubernetes
 - Kustomize
 - Helm v3
-- Traefik v2 IngressRoute
+- NGINX / Traefik v2 IngressRoute
 - Mongodb v4
 - Any other tools of your choice
 
@@ -54,7 +57,7 @@ Please follow this guidelines while implementing the solution.
 
 - Solution and code should be descriptive and well documented.
 - Methods, variable naming and casing should be clear and consistent.
-- Integrate CI/CD Service such as “travis” or github actions and add status badge in README.
+- Integrate CI/CD Service such as travis / github / jenkins actions and add status badge in README.
 - Write clear README with installation and testing steps.
 
 How to proceed
@@ -63,7 +66,7 @@ How to proceed
 2) Write the code.
 3) Write the documentation.
 4) The repository should contains the modified application and all other DevOps files and scripts in a separate folder
-4) Create a Private Project on Github and push your code on it. And give the access to following users: [Meabed](https://github.com/meabed)
+4) Create a Private Project on Github and push your code on it. And give the access to following users: [Meabed](https://github.com/meabed) and [Vamshi Siddarth](https://github.com/vamshisiddarth)
 
 Time limit
 ===========
