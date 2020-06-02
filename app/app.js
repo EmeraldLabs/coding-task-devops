@@ -1,28 +1,29 @@
 // server start: nodemon app.js
 
-const express = require('express');
-const path = require('path');
-const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
-const methodOverride = require('method-override');
-const flash = require('connect-flash');
-const session = require('express-session');
-const mongoose = require('mongoose');
-const app = express();
-const passport = require('passport');
 
 // load routes
-const todos = require('./routes/todos');
-const users = require('./routes/users');
+import todos from "./routes/todos";
 
-// passport config
-require('./config/passport')(passport);
 
 // db config
-const db = require('./config/database');
+import db from "./config/database";
+import config from "./config/passport";
+import users from "./routes/users";
+import passport from "passport";
+import mongoose from "mongoose";
+import session from "express-session";
+import flash from "connect-flash";
+import methodOverride from "method-override";
+import bodyParser from "body-parser";
+import exphbs from "express-handlebars";
+import path from "path";
+import express from "express";
 
+const app = express();
+// passport config
+config(passport);
 // connect to mongoose
-mongoose.connect(db.mongoURI, { useUnifiedTopology: true, useNewUrlParser: true }).then(() => {
+mongoose.connect(db.mongoURI, {useUnifiedTopology: true, useNewUrlParser: true}).then(() => {
   console.log('MongoDB connected...');
 }).catch(err => {
   console.log(err);
@@ -38,7 +39,7 @@ app.set('view engine', 'handlebars');
 // body parser middleware
 // - parse application/x-www-form-urlencoded
 // - parse application/json
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Static folder
