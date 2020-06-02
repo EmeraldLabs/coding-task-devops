@@ -1,10 +1,6 @@
 // server start: nodemon app.js
-
-
 // load routes
 import todos from "./routes/todos";
-
-
 // db config
 import db from "./config/database";
 import config from "./config/passport";
