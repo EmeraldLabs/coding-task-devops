@@ -1,6 +1,8 @@
 # Tradeling DevOps Challenge
 
-![Tradeling Logo]("https://c8n.tradeling.com/assets/svgs/tradeling-logo.svg)
+<p align="left">
+<a href="https://tradeling.com"><img src="https://c8n.tradeling.com/assets/svgs/tradeling-logo.svg" alt="Tradeling" width="250"/></a>
+</p>
 
 ## Goal
 The challenge goal is to build a fully automated infrastructure and CI/CD solution for a simple web-based application.
