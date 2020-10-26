@@ -47,4 +47,4 @@ The task is to deploy the application on AWS using Kubernetes.
 * Database backup and restore
 
 ## Support
-Feel free to contact us it-admin@tradeling.com for any questions.
+Feel free to contact us it@emerald-labs.com for any questions.
